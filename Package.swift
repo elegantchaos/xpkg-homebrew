@@ -16,7 +16,7 @@ let package = Package(
         .executable(name: "xpkg-homebrew-xpkg-hooks", targets: ["xpkg-homebrew-xpkg-hooks"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/XPkgPackage", from:"1.0.4"),
+        .package(url: "https://github.com/elegantchaos/XPkgPackage", from:"1.0.3"),
     ],
     targets: [
         .target(
