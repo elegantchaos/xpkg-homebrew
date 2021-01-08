@@ -15,6 +15,7 @@ let package = InstalledPackage(fromCommandLine: arguments)
 
 let links = [
     ["add-path.sh", "~/.local/share/shell-hooks/startup/homebrew-path"],
+    ["add-path.fish", "~/.config/fish/conf.d/com.elegantchaos.samdeane.homebrew.fish"],
 ]
 
 try! package.performAction(fromCommandLine: CommandLine.arguments, links: links)
