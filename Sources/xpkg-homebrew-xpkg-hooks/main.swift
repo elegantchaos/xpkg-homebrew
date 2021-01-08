@@ -6,6 +6,7 @@
 import XPkgPackage
 import Runner
 import Foundation
+import AppKit
 
 let arguments = CommandLine.arguments
 
@@ -21,5 +22,8 @@ try! package.performAction(fromCommandLine: CommandLine.arguments, links: links)
 let scriptURL = package.local.appendingPathComponent("install.sh")
 if package.action(fromCommandLine: arguments) == .install {
     // open the install script in a new terminal window - it will prompt the user to install homebrew
-    scriptURL.openWithWorkspace()
+    let workspace = NSWorkspace.shared
+    if let url = workspace.urlForApplication(withBundleIdentifier: "com.apple.terminal") {
+        try! workspace.open([scriptURL], withApplicationAt: url, configuration: [:])
+    }
 }
