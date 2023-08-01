@@ -3,4 +3,4 @@
 #  All code (c) 2020 - present day, Elegant Chaos Limited.
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-set -x PATH "/opt/homebrew/bin" $PATH
+fish_add_path "/opt/homebrew/bin"
